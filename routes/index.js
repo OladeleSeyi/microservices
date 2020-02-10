@@ -19,7 +19,7 @@ router.use((err, req, res, next) => {
   const response = {
     message: err.message
   };
-  console.log(process.env.NODE_ENV);
+
   if (process.env.NODE_ENV === "development" && !(err instanceof APIError)) {
     // Unknown server error. Response with stack trace for easier debugging
     response.stack = err.stack;

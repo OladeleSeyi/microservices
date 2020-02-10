@@ -4,6 +4,7 @@ import "express-async-errors";
 import cors from "cors";
 import keys from "./config/keys";
 import routes from "./routes";
+import "./db";
 
 let app = express();
 
