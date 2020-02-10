@@ -4,6 +4,7 @@
     "node": true
   },
   "extends": "eslint:recommended",
+  "plugins": ["prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"

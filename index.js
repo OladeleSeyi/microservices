@@ -1,2 +1,2 @@
-require = require("esm")(module);
-module.exports = require("./server");
+const esm = require("esm")(module);
+module.exports = esm("./server");

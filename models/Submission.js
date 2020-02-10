@@ -10,7 +10,7 @@ const submissionSchema = new Schema({
   shoot: String,
   venue: String,
   date: String,
-  extras: String
+  referrer: String
 });
 
 const Submission = mongoose.model("Submission", submissionSchema);
