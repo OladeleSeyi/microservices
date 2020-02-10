@@ -1,12 +1,11 @@
 import { Router } from "express";
 
-import Submissions from "../controllers/submissions";
-import submissions from "../controllers/submissions";
+import FormController from "../controllers/form";
 
 const router = Router();
 
-router.post("/submissions", Submissions.addSubmission);
-router.get("./submissions", Submissions.getAllSubmissions);
-router.get("/submissions/:id", Submissions.getSubmission);
+router.post("/form", FormController.addForm);
+router.get("./form", FormController.getAllForms);
+router.get("/form/:id", FormController.getForm);
 
 export default router;

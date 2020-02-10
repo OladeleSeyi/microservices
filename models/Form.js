@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 const Schema = mongoose.Schema;
-const submissionSchema = new Schema({
+const formSchema = new Schema({
   formName: String,
   lastName: String,
   firstName: String,
@@ -13,5 +13,6 @@ const submissionSchema = new Schema({
   referrer: String
 });
 
-const Submission = mongoose.model("Submission", submissionSchema);
-module.exports = Submission;
+const Form = mongoose.model("Form", formSchema);
+
+export default Form;

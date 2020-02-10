@@ -8,7 +8,7 @@ router.all("/", (req, res) => {
 });
 router.use("/api", api);
 
-router.use((req, res) => {
+router.use(req => {
   throw new NotFoundError(
     `${req.method.toUpperCase()} Route ${req.url} Not Found!`
   );
