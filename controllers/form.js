@@ -21,7 +21,12 @@ export default {
     }
   },
   async getForm(req, res) {
-    res.send("TDB");
+    const { id } = req.params;
+    console.log(id);
+    if (!id) throw new BadRequestError("Invalid ID ");
+    const form = await db.forms.getOne(id);
+    if (!form) throw new NotFoundError("Form Not Found");
+    return res.status(200).json({ form });
   },
   async getAllForms(req, res) {
     const forms = await db.forms.getAll();

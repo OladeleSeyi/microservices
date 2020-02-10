@@ -31,5 +31,15 @@ export default {
       });
     });
     return all;
+  },
+  async getOne(id) {
+    let form = await new Promise((resolve, reject) => {
+      Form.findOne({ _id: id }, (err, doc) => {
+        if (err) reject(err);
+        if (!doc) resolve(null);
+        resolve(doc);
+      });
+    });
+    return form;
   }
 };
