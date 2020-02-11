@@ -10,8 +10,7 @@ export default {
     let data = req.body;
 
     if (!data.formName) throw new UnauthorizedError("Invalid form submition");
-    if (!data.firstName)
-      throw new BadRequestError("Please fill the form Properly");
+    if (!data.email) throw new BadRequestError("Please fill the form Properly");
     const form = await db.forms.create(data);
 
     if (form) {

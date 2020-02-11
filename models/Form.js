@@ -7,6 +7,7 @@ const formSchema = new Schema({
   firstName: String,
   email: String,
   phone: String,
+  subject: String,
   message: String,
   shoot: String,
   venue: String,
