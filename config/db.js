@@ -5,8 +5,7 @@ const uri = process.env.MONGO_URI || keys.mongodb;
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    reconnectTries: 2
+    useUnifiedTopology: true
   })
   .then(() => {
     console.log(`MongoDb is succesfully connnected to ${uri}`);

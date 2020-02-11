@@ -14,5 +14,5 @@ app.use(cors());
 app.use(routes);
 
 app.listen(keys.PORT, () => {
-  console.log(`The server is spinning at port  ${process.env.PORT}`);
+  console.log(`The server is spinning 🛸 at port  ${process.env.PORT}`);
 });
