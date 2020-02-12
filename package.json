@@ -2,8 +2,9 @@
   "name": "logmails",
   "version": "1.0.0",
   "description": "A simple microservice to save submissions to heartvslogic.com",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier-eslint —eslint-config-path ./.eslintrc.js --write '**/*.js'",
     "lint": "eslint . --ext .js"
