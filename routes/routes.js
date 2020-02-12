@@ -12,9 +12,6 @@ authRouter.post("/register", AuthController.register);
 authRouter.post("/login", AuthController.login);
 authRouter.get("/me", AuthController.authenticate, AuthController.getMe);
 
-router.post("/auth", AuthController.register);
-router.post("/login", AuthController.login);
-
 router.post("/form", FormController.addForm);
 router.get("/form", AuthController.authenticate, FormController.getAllForms);
 router.get("/form/:id", AuthController.authenticate, FormController.getForm);
