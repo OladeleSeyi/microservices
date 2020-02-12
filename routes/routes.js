@@ -16,7 +16,7 @@ router.post("/auth", AuthController.register);
 router.post("/login", AuthController.login);
 
 router.post("/form", FormController.addForm);
-router.get("/form", FormController.getAllForms);
-router.get("/form/:id", FormController.getForm);
+router.get("/form", AuthController.authenticate, FormController.getAllForms);
+router.get("/form/:id", AuthController.authenticate, FormController.getForm);
 
 export default router;

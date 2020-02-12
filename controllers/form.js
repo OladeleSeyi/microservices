@@ -21,7 +21,6 @@ export default {
   },
   async getForm(req, res) {
     const { id } = req.params;
-    console.log(id);
     if (!id) throw new BadRequestError("Invalid ID ");
     const form = await db.forms.getOne(id);
     if (!form) throw new NotFoundError("Form Not Found");

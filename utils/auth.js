@@ -30,5 +30,7 @@ export function jwtVerify(token = "") {
 }
 
 export function buildUserResponse(userData) {
-  return { user: userData, token: jwtSign({ ...userData }) };
+  let { username, name, _id } = userData;
+  let data = { username, name, _id };
+  return { user: data, token: jwtSign({ ...userData }) };
 }

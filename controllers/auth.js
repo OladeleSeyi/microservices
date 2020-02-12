@@ -27,7 +27,6 @@ export default {
       throw new BadRequestError("You are not permitted to register");
     const userExists = await db.users.findByUserName(username);
 
-    console.log("userExists", userExists);
     if (userExists[0])
       throw new BadRequestError("Username exists! Proceed to login");
 
@@ -60,7 +59,7 @@ export default {
       throw new UnauthorizedError("Incorrect Password");
     }
     return res.json({
-      ...buildUserResponse(user),
+      ...buildUserResponse(user[0]),
       message: "Login Successful"
     });
   },
