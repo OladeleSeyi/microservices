@@ -1,10 +1,10 @@
 import Datastore from "nedb";
-import bcryptjs from "bcrypt";
+import bcrypt from "bcryptjs";
 
 const db = new Datastore({ filename: process.env.NEDB, autoload: true });
 const db2 = new Datastore({ filename: process.env.NEDB2, autoload: true });
 
-let pass = bcryptjs.hashSync(process.env.ADMIN_PASS, 10);
+let pass = bcrypt.hashSync(process.env.ADMIN_PASS, 10);
 
 let admin = {
   id: "lala",
