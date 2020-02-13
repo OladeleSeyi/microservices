@@ -4,4 +4,4 @@ package-lock.json
 users.db
 client
 models/users.db
-models./log.db
+models/log.db
