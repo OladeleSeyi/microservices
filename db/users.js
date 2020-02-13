@@ -1,4 +1,5 @@
-import db from "../models/User";
+import Nedb from "../models/Nedb";
+const db = Nedb.db;
 
 class User {
   constructor(data) {
